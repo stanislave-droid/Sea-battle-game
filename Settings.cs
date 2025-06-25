@@ -44,7 +44,6 @@ namespace Морський_бій
             {
                 this.Close();
             }
-            Console.WriteLine("Bye");
             return;
         }
 
