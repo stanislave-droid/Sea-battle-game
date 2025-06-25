@@ -38,6 +38,15 @@ namespace Морський_бій
             BotShipsVisibleSwitch.Checked = Properties.Settings.Default.BotShipsVisible; // ✅ Встановлює попередній стан чекбоксу
         }
 
+        private void Settings_close(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+            return;
+        }
+
     }
 }
 

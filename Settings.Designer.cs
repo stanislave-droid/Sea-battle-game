@@ -43,6 +43,7 @@
             this.BotShipsVisibleSwitch.Text = "Показ кораблів бота \r\n(використовувати тільки для тесту)";
             this.BotShipsVisibleSwitch.UseVisualStyleBackColor = true;
             this.BotShipsVisibleSwitch.CheckedChanged += new System.EventHandler(this.BotShipsVisibleSwitch_CheckedChanged);
+            this.BotShipsVisibleSwitch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Settings_close);
             // 
             // Review
             // 

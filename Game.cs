@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
@@ -36,6 +37,7 @@ namespace Морський_бій
         private bool playerTurnActive = true;
         private bool allShipsConfirmed = false;
         public static bool isVisible = false;
+        public static bool close = false;
         #endregion
 
         #region Lists
@@ -161,14 +163,17 @@ namespace Морський_бій
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            DialogResult result = MessageBox.Show("Ви впевнені, що хочете вийти?", "Вихід", MessageBoxButtons.YesNo);
-            if (result == DialogResult.No)
+            if (close != true)
             {
-                e.Cancel = true;
-            }
-            else
-            {
-                Environment.Exit(0);
+                DialogResult result = MessageBox.Show("Ви впевнені, що хочете вийти?", "Вихід", MessageBoxButtons.YesNo);
+                if (result == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+                else
+                {
+                    Environment.Exit(0);
+                }
             }
         }
 
@@ -490,6 +495,25 @@ namespace Морський_бій
                 this.Refresh();
 
                 return true;
+            }
+            if (keyData == Keys.Escape)
+            {
+                
+                if (close == false){
+                    DialogResult close_result =  MessageBox.Show("Ти хочеш покинути гру?", "Покинути", MessageBoxButtons.YesNo);
+                    if (close_result == DialogResult.Yes) { 
+                        close = true;
+                        Application.Exit();
+                    }
+                }
+                else
+                {
+                    Application.Exit();
+                    close = false;
+                }
+                
+                return true;
+
             }
 
             return base.ProcessCmdKey(ref msg, keyData);

@@ -18,19 +18,24 @@ namespace Морський_бій
             InitializeComponent();
         }
 
+        public bool Settings_opened = false;
         private static Settings settingsInstance;
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            DialogResult result = MessageBox.Show("Ви впевнені, що хочете вийти?", "Вихід", MessageBoxButtons.YesNo);
-            if (result == DialogResult.No)
+            if (Морський_бій.Game.close != true)
             {
-                e.Cancel = true;
+                DialogResult result = MessageBox.Show("Ви впевнені, що хочете вийти?", "Вихід", MessageBoxButtons.YesNo);
+                if (result == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+                else
+                {
+                    Environment.Exit(0);
+                }
             }
-            else
-            {
-                Environment.Exit(0);
-            }
+            return;
         }
 
         private void StartButton_Click(object sender, EventArgs e)
@@ -60,7 +65,7 @@ namespace Морський_бій
                 {
                 settingsInstance = new Settings();
                 settingsInstance.Show();
-                };
+                }
             }
             else
             {
