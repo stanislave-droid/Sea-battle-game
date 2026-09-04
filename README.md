@@ -30,3 +30,18 @@
 Додаток: 
 Є кнопка виходу з гри, 
 яка потребує підтвердження 
+
+The game works on templates, there is no random combinations but even than you have to remember all templates to know which is turned on.
+
+<h3>The Main Menu</h3>
+<img width="1919" height="1029" alt="Screenshot 2025-05-19 122214" src="https://github.com/user-attachments/assets/a60d32f8-1ece-4d7f-a8e3-131acdc1bd97" />
+
+<h3>Settings</h3>
+<img width="381" height="584" alt="Screenshot 2025-05-19 114236" src="https://github.com/user-attachments/assets/30e66071-38b9-488a-9716-30474d0eb8e1" />
+
+<h2>The Game</h3>
+<h3>Start</h2>
+<img width="1919" height="1030" alt="Screenshot 2025-05-19 122049" src="https://github.com/user-attachments/assets/d23132e8-fc15-43da-9d2a-bde566533403" />
+
+<h3>Fight (with cheats on)</h3>
+<img width="1919" height="1031" alt="Screenshot 2025-05-19 075247" src="https://github.com/user-attachments/assets/c5acc274-86c1-4cf7-abd7-083bc6cceb32" />
